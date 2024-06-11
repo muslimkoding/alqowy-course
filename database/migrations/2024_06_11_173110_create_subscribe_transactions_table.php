@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('subscribe_transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('total_amount'); //nilainya tidak bisa negatif
+            $table->boolean('is_paid');
+            $table->date('subscription_start_date')->nullable();
+            $table->string('proof');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
