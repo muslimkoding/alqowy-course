@@ -16,6 +16,30 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @role('owner|teacher')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('admin.courses.index')" :active="request()->routeIs('admin.courses.index')">
+                        {{ __('Courses') }}
+                    </x-nav-link>
+                </div>
+                @endrole
+                @role('owner')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.index')">
+                        {{ __('Categories') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('admin.teachers.index')" :active="request()->routeIs('admin.teachers.index')">
+                        {{ __('Teachers') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('admin.subscribe_transactions.index')" :active="request()->routeIs('admin.subscribe_transactions.index')">
+                        {{ __('Subscribe Transactions') }}
+                    </x-nav-link>
+                </div>
+                @endrole
             </div>
 
             <!-- Settings Dropdown -->
