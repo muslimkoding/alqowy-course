@@ -12,7 +12,7 @@ class SubscribeTransaction extends Model
     use HasFactory;
 
     protected $fillable = [
-        'tota_amount',
+        'total_amount',
         'is_paid',
         'subscription_start_date',
         'proof',

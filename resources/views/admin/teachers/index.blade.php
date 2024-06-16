@@ -21,7 +21,9 @@
                     <img src="{{ Storage::url($teacher->user->avatar) }}" alt="" class="rounded-2xl object-cover w-[120px] h-[90px]">
                     <div class="flex flex-col">
                         <h3 class="text-indigo-950 text-xl font-bold">{{ $teacher->user->name }}</h3>
+                        <p class="text-indigo-950 text-sm">{{ $teacher->user->occupation }}</p>
                     </div>
+                   
                 </div> 
                 <div class="hidden md:flex flex-col">
                     <p class="text-slate-500 text-sm">Date</p>
